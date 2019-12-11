@@ -1,3 +1,7 @@
+
+Built it using a json data to display the contacts of police stations in the 37 states of Nigeria.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
