@@ -6,9 +6,11 @@ function FetchData() {
   const [states, setStates] = useState([]);
   const [name, setName] = useState([]);
 
+  const url = "/policeJson.json";
+
   useEffect(() => {
     axios
-      .get("http://localhost:3000/policeJson.json")
+      .get(url)
       .then(res => {
         setStates(res.data);
       })
@@ -20,16 +22,16 @@ function FetchData() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-12 h5 text-white text-center mt-1 mt-md-2">
+        <div className="col-12 h5 text-white text-center mt-2 mt-md-2">
           <img src={Logo} alt="Police logo" className="img-responsive" width="140px" height="140px" />
           <p className="h6 py-1">Easy Contact of police across the states</p>
         </div>
-        <div className="col-12 col-md-8 offset-md-2 vertical-center">
+        <div className="col-12 col-md-6 offset-md-3">
           <label htmlFor="select-state" className="text-white h5">
             Choose state police to contact
           </label>
           <select
-            className="custom-select"
+            className="form-control"
             id="select-state"
             onChange={e => setName(e.target.value)}
           >
